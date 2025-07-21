@@ -14,13 +14,13 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require("@/assets/images/background-image.png")}
+          source={require("../assets/images/background-image.png")}
           style={styles.background}
           resizeMode="cover"
         >
           <View style={styles.container}>
             <View style={styles.companyLogo}>
-              <Image source={require("@/assets/images/Logo.png")} />
+              <Image source={require("../assets/images/Logo.png")} />
             </View>
 
             <View style={styles.textGroup}>
@@ -32,7 +32,9 @@ export default function Index() {
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
-                  <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
+                  <Text style={{ ...styles.textSmall, color: "black" }}>
+                    Join here
+                  </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.transparentButton}>
@@ -90,7 +92,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 5,
     alignItems: "center",
-    fontSize: 20,
     flex: 1,
   },
   button: {
@@ -100,7 +101,6 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 5,
     alignItems: "center",
-    fontSize: 20,
     backgroundColor: "white",
     flex: 1,
   },
