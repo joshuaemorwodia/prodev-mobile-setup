@@ -1,21 +1,26 @@
-import { useRouter } from "expo-router"; // ✅ Import router
-import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Dimensions,
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
-  const router = useRouter(); // ✅ Initialize router
-
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require("../assets/images/background-image.png")}
+          source={require("@/assets/images/background-image.png")}
           style={styles.background}
           resizeMode="cover"
         >
           <View style={styles.container}>
             <View style={styles.companyLogo}>
-              <Image source={require("../assets/images/Logo.png")} />
+              <Image source={require("@/assets/images/Logo.png")} />
             </View>
 
             <View style={styles.textGroup}>
@@ -35,13 +40,9 @@ export default function Index() {
                 </TouchableOpacity>
               </View>
 
-              {/* ✅ Navigation button */}
-              <TouchableOpacity
-                onPress={() => router.push("/home")}
-                style={{ alignItems: "center", paddingVertical: 20 }}
-              >
+              <View style={{ alignItems: "center", paddingVertical: 20 }}>
                 <Text style={{ color: "white" }}>Continue to home</Text>
-              </TouchableOpacity>
+              </View>
             </View>
           </View>
         </ImageBackground>
